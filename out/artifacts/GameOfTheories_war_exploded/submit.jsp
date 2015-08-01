@@ -1,0 +1,29 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Serkan-PC
+  Date: 24/07/2015
+  Time: 01:18
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Submit Post</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<jsp:include page="header.jsp" />
+<div class="main">
+
+<form>
+    <p>
+    <label for="title"> Title:</label> <br>&nbsp <input type="text" id="title" size="75">
+        <br>
+    <label for="text">Main Body:</label> <br>&nbsp <textarea id="text" cols="40" rows="5"></textarea>
+    </p>
+</form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-07-20" view-index="0" gantt-divider-location="458" resource-divider-location="300" version="2.7" locale="en_GB">
+    <description/>
+    <view zooming-state="default:0" id="gantt-chart">
+        <field id="tpd3" name="Name" width="51" order="0"/>
+        <field id="tpd4" name="Begin date" width="24" order="1"/>
+        <field id="tpd5" name="End date" width="24" order="2"/>
+        <option id="color.recent"><![CDATA[#ff6699 #ff99ff #ff9999 #ff6666 #ff6633 #ffff99 #ccff99 #ccff66 #66ff33 #33ff33]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="50" order="0"/>
+        <field id="1" name="Default role" width="50" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="2" name="Requirements" color="#33ff33" meeting="false" start="2015-07-08" duration="2" complete="0" expand="true">
+            <depend id="0" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="0" name="Research Resources" color="#33ff33" meeting="false" start="2015-07-10" duration="2" complete="0" expand="true">
+            <notes><![CDATA[Do research on all resources that will be used and select tools for development]]></notes>
+            <depend id="11" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="11" name="Design Plan" color="#ccff66" meeting="false" start="2015-07-14" duration="4" complete="0" expand="true">
+            <depend id="23" type="2" difference="0" hardness="Strong"/>
+            <task id="4" name="Wireframe" color="#66ff33" meeting="false" start="2015-07-14" duration="2" complete="0" expand="true">
+                <depend id="9" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="9" name="Database Design" color="#ccff99" meeting="false" start="2015-07-16" duration="2" complete="0" expand="true">
+                <depend id="24" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="23" name="Build site" color="#ff6633" meeting="false" start="2015-07-18" duration="28" complete="0" expand="true">
+            <depend id="73" type="2" difference="0" hardness="Strong"/>
+            <task id="24" name="Basic HTML &amp; CSS" color="#ff6666" meeting="false" start="2015-07-18" duration="4" complete="0" expand="true">
+                <depend id="29" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="29" name="Build Database" color="#ff9999" meeting="false" start="2015-07-22" duration="1" complete="0" expand="true"/>
+            <task id="82" name="Implement Register" color="#8cb6ce" meeting="false" start="2015-07-24" duration="3" complete="0" expand="true"/>
+            <task id="45" name="Implement Login" color="#ff6699" meeting="false" start="2015-07-27" duration="4" complete="0" expand="true">
+                <depend id="63" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="63" name="Display Frontpage" color="#8cb6ce" meeting="false" start="2015-07-31" duration="2" complete="0" expand="true">
+                <depend id="81" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="81" name="Security" color="#8cb6ce" meeting="false" start="2015-08-02" duration="4" complete="0" expand="true">
+                <depend id="49" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="49" name="Post-Text Function" color="#8cb6ce" meeting="false" start="2015-08-06" duration="3" complete="0" expand="true">
+                <depend id="54" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="54" name="Post-Image Function" color="#8cb6ce" meeting="false" start="2015-08-09" duration="3" complete="0" expand="true">
+                <depend id="59" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="59" name="Voting" color="#8cb6ce" meeting="false" start="2015-08-12" duration="3" complete="0" expand="true"/>
+        </task>
+        <task id="73" name="Deploy Site" color="#8cb6ce" meeting="false" start="2015-08-15" duration="2" complete="0" expand="true">
+            <depend id="76" type="2" difference="0" hardness="Strong"/>
+            <depend id="80" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="80" name="SEO" color="#8cb6ce" meeting="false" start="2015-08-17" duration="2" complete="0" expand="true"/>
+        <task id="76" name="Start Advertising website" color="#8cb6ce" meeting="false" start="2015-08-17" duration="2" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <taskdisplaycolumns>
+        <displaycolumn property-id="tpd2" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd7" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd8" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd12" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd6" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd10" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd11" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd9" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd1" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd0" order="-1" width="75" visible="false"/>
+        <displaycolumn property-id="tpd3" order="0" width="234" visible="true"/>
+        <displaycolumn property-id="tpd4" order="1" width="110" visible="true"/>
+        <displaycolumn property-id="tpd5" order="2" width="110" visible="true"/>
+    </taskdisplaycolumns>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

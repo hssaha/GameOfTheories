@@ -1,0 +1,72 @@
+body{
+    background-color: black;
+    font-family: Arial;
+}
+.container{
+    width:100%;
+    background-color: black;
+}
+.top{
+    width:100%;
+    background-color: blue;
+    font-size: 50px;
+    font-family: Impact;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+}
+#titleExtra{
+    font-size: 25px;
+    margin-left: 20px;
+}
+.block{
+    margin-top: 60px;
+}
+.left{
+    background-color: green;
+    float: left;
+    width: 150px;
+}
+.createPost{
+    left: 0;
+    background-color: gainsboro;
+    float: right;
+    width: calc(100% - 175px);
+    padding-left: 25px;
+}
+.main{
+    left: 0;
+    background-color: yellow;
+    float: right;
+    width: calc(100% - 150px);
+}
+.main p{
+    padding-left: 25px;
+}
+.post{
+    margin: 50px;
+}
+.signupmain{
+    width: 510px;height: 300px;
+    color: white;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+.signupmain .title{
+    width: 300px;
+    font-size: 80px;
+    float: left;
+    text-align: right;
+}
+.signupmain .boxes{
+    padding-left: 10px;
+    width: 200px;
+    float: right;
+    text-align: left;
+}
