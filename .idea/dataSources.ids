@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source source="LOCAL" name="MySQL - @localhost" uuid="433fc1d3-553c-43ed-a611-20775b6e3526">
+  <data-source name="MySQL - @localhost" uuid="433fc1d3-553c-43ed-a611-20775b6e3526">
     <database-info product="MySQL" version="5.6.26" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
@@ -28,6 +28,7 @@
       <column name="created" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
       <column name="votes" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
       <column name="creator" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="img_link" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
       <primary-key name="PRIMARY" columns="post_id"/>
       <foreign-key name="post_ibfk_1" columns="creator" ref-table="user" ref-schema="" ref-catalog="got" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="votes_ibfk_2" table="votes" schema="" catalog="got" columns="post_id"/>

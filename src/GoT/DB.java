@@ -3,6 +3,7 @@
  */
 package GoT;
 
+import java.io.IOException;
 import java.sql.*;
 
 public class DB {
@@ -61,7 +62,7 @@ public class DB {
         try{
             PreparedStatement ps = con.prepareStatement("SELECT * from user where username=? and password=?");
             ps.setString(1,u);
-            ps.setString(2,p);
+            ps.setString(2, p);
             ResultSet rs = ps.executeQuery();
             return rs.next();
 
@@ -72,6 +73,7 @@ public class DB {
 
     }
     public int getId(String u,String p){
+        System.out.println("getid");
         try{
             PreparedStatement ps = con.prepareStatement("SELECT * from user where username=? and password=?");
             ps.setString(1,u);
@@ -84,5 +86,8 @@ public class DB {
             System.out.println("Error: "+e);
             return 0;
         }
+    }
+    public void submit(){
+        System.out.println("works");
     }
 }

@@ -36,7 +36,6 @@
         <%
             String er = request.getParameter("error");
             if(er!=null){
-                //System.out.println(er);
                 if(er.equals("true")){
                     %>Error occurred
                     <%

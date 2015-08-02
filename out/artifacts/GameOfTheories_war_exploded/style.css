@@ -70,3 +70,19 @@ body{
     float: right;
     text-align: left;
 }
+#dropzone {
+    width: 50%;
+    height: 300px;
+    border: 2px dashed #0087F7;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    margin: 0 auto;
+}
+#dropzone .dz-message{
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 300px;
+    font-size: 25px;
+}

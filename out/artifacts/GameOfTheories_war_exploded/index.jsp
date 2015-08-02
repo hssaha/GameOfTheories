@@ -27,7 +27,6 @@
       <div class="post">
           Test Post
       </div>
-
   </div>
   </div>
   </body>
