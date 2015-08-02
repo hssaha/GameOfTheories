@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-07-20" view-index="0" gantt-divider-location="458" resource-divider-location="300" version="2.7" locale="en_GB">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2015-07-31" view-index="0" gantt-divider-location="458" resource-divider-location="300" version="2.7" locale="en_GB">
     <description/>
-    <view zooming-state="default:0" id="gantt-chart">
+    <view zooming-state="default:3" id="gantt-chart">
         <field id="tpd3" name="Name" width="51" order="0"/>
         <field id="tpd4" name="Begin date" width="24" order="1"/>
         <field id="tpd5" name="End date" width="24" order="2"/>
@@ -50,7 +50,7 @@
                 <depend id="24" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="23" name="Build site" color="#ff6633" meeting="false" start="2015-07-18" duration="28" complete="0" expand="true">
+        <task id="23" name="Build site" color="#ff6633" meeting="false" start="2015-07-18" duration="37" complete="0" expand="true">
             <depend id="73" type="2" difference="0" hardness="Strong"/>
             <task id="24" name="Basic HTML &amp; CSS" color="#ff6666" meeting="false" start="2015-07-18" duration="4" complete="0" expand="true">
                 <depend id="29" type="2" difference="0" hardness="Strong"/>
@@ -73,13 +73,16 @@
                 <depend id="59" type="2" difference="0" hardness="Strong"/>
             </task>
             <task id="59" name="Voting" color="#8cb6ce" meeting="false" start="2015-08-12" duration="3" complete="0" expand="true"/>
+            <task id="83" name="Email Verification" color="#8cb6ce" meeting="false" start="2015-08-15" duration="2" complete="0" expand="true"/>
+            <task id="84" name="Design" color="#8cb6ce" meeting="false" start="2015-08-17" duration="5" complete="0" expand="true"/>
+            <task id="85" name="Mobile Compatibility" color="#8cb6ce" meeting="false" start="2015-08-22" duration="2" complete="0" expand="true"/>
         </task>
-        <task id="73" name="Deploy Site" color="#8cb6ce" meeting="false" start="2015-08-15" duration="2" complete="0" expand="true">
+        <task id="73" name="Deploy Site" color="#8cb6ce" meeting="false" start="2015-08-24" duration="2" complete="0" expand="true">
             <depend id="76" type="2" difference="0" hardness="Strong"/>
             <depend id="80" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="80" name="SEO" color="#8cb6ce" meeting="false" start="2015-08-17" duration="2" complete="0" expand="true"/>
-        <task id="76" name="Start Advertising website" color="#8cb6ce" meeting="false" start="2015-08-17" duration="2" complete="0" expand="true"/>
+        <task id="80" name="SEO" color="#8cb6ce" meeting="false" start="2015-08-26" duration="2" complete="0" expand="true"/>
+        <task id="76" name="Start Advertising website" color="#8cb6ce" meeting="false" start="2015-08-26" duration="2" complete="0" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>

@@ -3,7 +3,7 @@
  */
 package GoT;
 
-import java.io.IOException;
+import java.awt.*;
 import java.sql.*;
 
 public class DB {
@@ -73,7 +73,6 @@ public class DB {
 
     }
     public int getId(String u,String p){
-        System.out.println("getid");
         try{
             PreparedStatement ps = con.prepareStatement("SELECT * from user where username=? and password=?");
             ps.setString(1,u);
@@ -87,7 +86,50 @@ public class DB {
             return 0;
         }
     }
-    public void submit(){
-        System.out.println("works");
+    public int submit(String title, String text, int i){
+        //submit text
+        try{
+            PreparedStatement ps = con.prepareStatement("Insert INTO post(type,title,content,created,votes,creator) VALUES (?,?,?,?,?,?)",Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1,"text");
+            ps.setString(2, title);
+            ps.setString(3, text);
+            ps.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
+            ps.setInt(5, 0);
+            ps.setInt(6, i);
+            ps.execute();
+            ResultSet rs = ps.getGeneratedKeys();
+            rs.next();
+            return rs.getInt(1);
+        }catch(Exception e){
+            System.out.println("Error: "+e);
+        }
+        return 0;
     }
+    public void submit(String title, Image img, int i){
+        //submit img
+
+    }
+    public Post viewPost(int id){
+        Post p=null;
+        try{
+            PreparedStatement ps = con.prepareStatement("SELECT * from post where post_id=?");
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            p = new Post(rs.getInt("post_id"),
+                    rs.getString("type"),
+                    rs.getString("title"),
+                    rs.getString("content"),
+                    rs.getTimestamp("created"),
+                    rs.getInt("votes"),
+                    rs.getInt("creator"),
+                    rs.getString("img_link"));
+
+
+        }catch(Exception e){
+            System.out.println("Error: "+e);
+        }
+        return p;
+    }
+
 }

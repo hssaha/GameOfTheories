@@ -2,7 +2,7 @@
   <artifact type="exploded-ear" name="test:ear exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/test_ear_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="test/javaeeApplication/javaEEApplication" />
+      <element id="javaee-facet-resources" facet="Servlet/javaeeApplication/javaEEApplication" />
       <element id="directory" name="web.war">
         <element id="artifact" artifact-name="test:war exploded" />
       </element>

@@ -32,3 +32,11 @@ function loginVal(){
     }
     return false;
 }
+function loggedIn(id){
+
+    if(id==null) {
+        document.getElementById("SubmitError").innerHTML = "Please log in"
+        return false;
+    }
+    return true;
+}

@@ -17,7 +17,8 @@
 <body>
 <jsp:include page="header.jsp" />
 <div class="main">
-    <form action="submit" method="post"><p>
+    <form onsubmit="return loggedIn(<%= session.getAttribute("id")%>)" action="/SubmitServlet" method="post"><p>
+        <span id="SubmitError"></span>
     <%
     String type=request.getParameter("post");
     if(type!=null){
@@ -34,7 +35,7 @@
         <br>
         <div id="dropzone">
              <div class="dz-message">
-                 <input type="file" name="pic" accept="image/jpeg" id="img">
+                 <input type="file" name="img" accept="image/jpeg" id="img">
                  <input type="submit">
              </div>
         </div>

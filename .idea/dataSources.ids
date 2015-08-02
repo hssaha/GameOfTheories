@@ -12,7 +12,7 @@
     <schema name="" catalog="performance_schema"/>
     <schema name="" catalog="test"/>
     <table name="comment" schema="" catalog="got" type="TABLE">
-      <column name="comment_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="comment_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="content" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
       <column name="created" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
       <column name="votes" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
@@ -21,7 +21,7 @@
       <foreign-key name="comment_ibfk_1" columns="creator" ref-table="user" ref-schema="" ref-catalog="got" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>
     <table name="post" schema="" catalog="got" type="TABLE">
-      <column name="post_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="post_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="type" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
       <column name="title" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
       <column name="content" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
@@ -31,7 +31,7 @@
       <column name="img_link" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
       <primary-key name="PRIMARY" columns="post_id"/>
       <foreign-key name="post_ibfk_1" columns="creator" ref-table="user" ref-schema="" ref-catalog="got" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="votes_ibfk_2" table="votes" schema="" catalog="got" columns="post_id"/>
+      <exported-key name="votes_ibfk_4" table="votes" schema="" catalog="got" columns="post_id"/>
     </table>
     <table name="user" schema="" catalog="got" type="TABLE">
       <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -50,9 +50,8 @@
       <column name="post_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="vote" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="date_voted" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <foreign-key name="votes_ibfk_2" columns="post_id" ref-table="post" ref-schema="" ref-catalog="got" ref-columns="post_id" update-rule="3" delete-rule="3" deferrability="2"/>
       <foreign-key name="votes_ibfk_3" columns="user_id" ref-table="user" ref-schema="" ref-catalog="got" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="fk_post" unique="false" columns="post_id"/>
+      <foreign-key name="votes_ibfk_4" columns="post_id" ref-table="post" ref-schema="" ref-catalog="got" ref-columns="post_id" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>
     <table name="CHARACTER_SETS" schema="" catalog="information_schema" type="SYSTEM VIEW">
       <column name="CHARACTER_SET_NAME" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12" def="Jyc="/>
